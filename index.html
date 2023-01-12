@@ -10,17 +10,29 @@
     <title>Challenge 04 - Javascript Study Quiz</title>
 </head>
 <body>
-    <header>
+    <header>  <!-- Header contains page title centered and above a link to high scores and the timer, split to either side-->
         <h1>JavaScript Study Quiz</h1>
-        <aside id="hiScores">
 
-        </aside>
-        <aside id="timer">
-
-        </aside>
+        <nav>
+            <aside id="hiScores">
+                <a id="high" href="#" >High Scores</a>
+            </aside>
+            <aside id="timer">
+                <p>Time Remaining: <span id="timeLeft"></span></p>
+            </aside>
+        </nav>
     </header>
-    <section id="gamespace">
 
+    <section id="gamespace">  <!-- The game space.  Will contain the question text and 4 choices-->
+        <article id="questionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, illum nulla sequi accusamus numquam fugiat minima sapiente adipisci a voluptas iusto! Aspernatur hic ex magnam reiciendis maxime deleniti odit incidunt.</article>
+        <button id="choice1">1</button>
+        <button id="choice2">2</button>
+        <button id="choice3">3</button>
+        <button id="choice4">4</button>
+        
     </section>
+
+
 </body>
+
 </html>

@@ -2,6 +2,11 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    position: relative;
+    background-color: rgb(28, 32, 223);
+}
+
 header h1 {
     text-align: center;
     font-size: 220%;
@@ -10,5 +15,43 @@ header h1 {
 }
 
 header {
+    width: 100vw;
     background-color: aqua;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+    line-height: 3;
+}
+
+#timer {
+    font-weight: bold;
+}
+ 
+#gamespace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 4px solid black;
+    border-radius: 30px;
+    background-color: tan;
+    margin: 3% 10%;
+    padding: 2%;
+}
+
+button {
+    margin: 10px;
+    padding: 4px 10px;
+    font-size: 150%;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#questionText {
+    font-size: 180%;
+    font-weight: bold;
 }
