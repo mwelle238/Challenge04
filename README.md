@@ -27,8 +27,8 @@ Please refer to the LICENSE in the repo.
 
 ## Screenshots
 
-![alt text](https://github.com/mwelle238/MWs-JS-quiz/assets/images/image1.JPG?raw=true)
-![alt text](https://github.com/mwelle238/MWs-JS-quiz/assets/images/image2.JPG?raw=true)
-![alt text](https://github.com/mwelle238/MWs-JS-quiz/assets/images/image3.JPG?raw=true)
-![alt text](https://github.com/mwelle238/MWs-JS-quiz/assets/images/image4.JPG?raw=true)
-![alt text](https://github.com/mwelle238/MWs-JS-quiz/assets/images/image5.JPG?raw=true)
+![alt text](https://github.com/mwelle238/MWs-JS-quiz/blob/main/assets/images/image1.JPG?raw=true)
+![alt text](https://github.com/mwelle238/MWs-JS-quiz/blob/main/assets/images/image2.JPG?raw=true)
+![alt text](https://github.com/mwelle238/MWs-JS-quiz/blob/main/assets/images/image3.JPG?raw=true)
+![alt text](https://github.com/mwelle238/MWs-JS-quiz/blob/main/assets/images/image4.JPG?raw=true)
+![alt text](https://github.com/mwelle238/MWs-JS-quiz/blob/main/assets/images/image5.JPG?raw=true)
