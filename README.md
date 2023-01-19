@@ -11,7 +11,7 @@ N/A
 ## Usage
 
 Deployed Website
-https://mwelle238.github.io/challenge03/
+https://mwelle238.github.io/MWs-JS-quiz/
 
 GitHub link
 https://github.com/mwelle238/MWs-JS-quiz
