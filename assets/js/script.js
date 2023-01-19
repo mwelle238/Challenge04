@@ -5,6 +5,7 @@ var questionEl = document.getElementById("questionText");
 var choices = document.querySelectorAll("button");
 var hiScoreListEl = document.getElementById("scoreList");
 var resultEl = document.getElementById("result");
+var inputEl = document.createElement("input");
 //declare variables
 var timer;
 var timeLeft = 20;
@@ -208,22 +209,22 @@ function resetScores(){
     displayHiScores();
 }
 
-//prompts to enter initials for a high score
-function getInitials() {
-    initials = '';
-    alert("You scored " + score + " points.  You have a high score!!");
-    do {
-        var input = prompt("Please enter your initials (will only accept the first 3 letters entered):");
-    } while (input == '' || input === null)
-    input = input.toUpperCase();
-    for (var i=0; i<3; i++){
-        if (input.charAt(i)===null){
-            break;
-        }
-        initials += input.charAt(i);
-    }
-    //console.log(initials);
-}
+/* //prompts to enter initials for a high score  -- removed and added text field for initial gathering
+ function getInitials() {
+     initials = '';
+     alert("You scored " + score + " points.  You have a high score!!");
+     do {
+         var input = prompt("Please enter your initials (will only accept the first 3 letters entered):");
+     } while (input == '' || input === null)
+     input = input.toUpperCase();
+     for (var i=0; i<3; i++){
+         if (input.charAt(i)===null){
+             break;
+         }
+         initials += input.charAt(i);
+     }
+     //console.log(initials);
+ } */
 
  // adjusts scores when a high is attained
 function adjustHighScores() {
@@ -285,13 +286,32 @@ function endGame() {
     if (highScores[maxHiScores] == null || score > highScores[maxHiScores]) {
         // good enough for high score list
         getInitials();
-        adjustHighScores();
+    } else {
+    displayEnd();
     }
+}
+
+function getInitials(){
+    resultEl.textContent = '';
+    questionEl.textContent = "You scored " + score + " points. You have achieved a high score, please enter your initials";
+    inputEl.maxLength = 3;
+    inputEl.setAttribute('type', 'text');
+    questionEl.appendChild(inputEl);
+    choices[0].textContent = "Submit";
+    choices[0].setAttribute('data-info', 'submit');
+    choices[1].style.visibility = 'hidden'
+    choices[2].style.visibility = 'hidden'
+    choices[3].style.visibility = 'hidden'
+}
+
+
+function displayEnd(){
     questionEl.textContent = "You scored " + score + " points.";
     choices[0].textContent = "Start new Game";
     choices[0].setAttribute('data-info', 'start');
     choices[1].textContent = "Show High Scores";
     choices[1].setAttribute('data-info', 'scores');
+    choices[1].style.visibility = 'visible';
     choices[2].style.visibility = 'hidden';
     choices[3].style.visibility = 'hidden';
     resultEl.textContent = '';
@@ -316,6 +336,15 @@ gamespaceEL.addEventListener("click", function(event) {
             return;
         } else if (info == 'home') {
             displayHome();
+            return;
+        } else if (info == 'submit') {
+            initials = inputEl.value.toUpperCase();
+            if (initials == '') {
+                resultEl.textContent = "You must enter initials";
+                return;
+            }
+            adjustHighScores();
+            displayEnd();
             return;
         } else if (info == 'correct') {
             score += 5;
